@@ -11,22 +11,20 @@ public class MultiplicationTable {
             System.out.print("" + b + "   ");
         }
         System.out.print("\n");
-        // i = numer wiersza
-        for (int i = 0; i < 11; i++) {
-            System.out.print(i);
+        for (int rowIdx = 0; rowIdx < 11; rowIdx++) {
+            System.out.print(rowIdx);
 
-            //j= numer kolumny
-            for (int j = 0; j < 11; j++) {
+            for (int columnIdx = 0; columnIdx < 11; columnIdx++) {
                 //dwucyfrowe
-                if (i * j > 9 && i * j <= 99)
-                    System.out.print(" " + j * i + " ");
+                if (rowIdx * columnIdx > 9 && rowIdx * columnIdx <= 99)
+                    System.out.print(" " + columnIdx * rowIdx + " ");
 
                 //jednocyfrowe`
-                if (i * j < 10)
-                    System.out.print("  " + j * i + " ");
+                if (rowIdx * columnIdx < 10)
+                    System.out.print("  " + columnIdx * rowIdx + " ");
 
-                if (i * j == 100)
-                    System.out.print(" " + j * i + " ");
+                if (rowIdx * columnIdx == 100)
+                    System.out.print(" " + columnIdx * rowIdx + " ");
             }
             System.out.println();
         }
